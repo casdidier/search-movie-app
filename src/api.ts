@@ -26,3 +26,15 @@ export const fetchPopularMovieList = async (): Promise<MovieResults> => {
 
   return result.json();
 };
+
+export const getMovieRequest = async (searchValue: string): Promise<MovieResults> => {
+  const result: Response = await fetch(
+    `${API_URL}search/movie?api_key=${API_KEY}&page=1&query=${searchValue}`
+  );
+
+  if (!result.ok) {
+    throw new Error('Something went horrible wrong!');
+  }
+
+  return result.json();
+};
