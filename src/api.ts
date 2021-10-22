@@ -1,4 +1,6 @@
 /* eslint-disable */
+import { API_URL, IMAGE_URL, API_KEY } from './config';
+
 export interface Movie {
   overview: string;
   id: number;
@@ -15,7 +17,7 @@ interface MovieResults {
 
 export const fetchPopularMovieList = async (): Promise<MovieResults> => {
   const result: Response =
-    await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=1e07e5ddc8cd4a8140560452f40758f5&language=en-US&page=1
+    await fetch(`${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=1
   `);
 
   if (!result.ok) {
