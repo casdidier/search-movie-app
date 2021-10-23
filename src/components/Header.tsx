@@ -5,6 +5,16 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
+  font-size: 2rem;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+`;
+
+const Title = styled.div`
+  font-weight: 500;
+  font-size: 2rem;
   width: 100%;
   padding-right: 10px;
   padding-left: 10px;
@@ -15,5 +25,7 @@ interface Props {
 }
 
 export const Header = ({ appName }: Props): JSX.Element => (
-  <HeaderContainer>{appName}</HeaderContainer>
+  <HeaderContainer>
+    <Title>{appName}</Title>
+  </HeaderContainer>
 );

@@ -5,15 +5,10 @@ import { IMAGE_URL } from '../config';
 import MovieCard from './MovieCard';
 
 const MovieGalleryContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 960px;
-  padding-right: 10px;
-  padding-left: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 5px;
 `;
 
 type Props = {
