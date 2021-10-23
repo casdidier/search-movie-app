@@ -36,9 +36,13 @@ const ImageDetail = styled.img`
   object-fit: cover;
 `;
 
+interface ParamTypes {
+  id: string;
+}
+
 /* eslint-disable */
 export default function MovieDetail(): ReactElement {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams<ParamTypes>();
   const [movieDetail, setMovieDetail] = useState({} as IMovieDetails);
 
   useEffect(() => {
