@@ -3,6 +3,7 @@ import { useHistory, BrowserRouter as Router, Link, Route, Switch } from 'react-
 import { fetchPopularMovieList, Movie, MovieList, getMovieRequest, getMovieDetail } from './api';
 import './App.css';
 import { Header } from './components/Header';
+import { Layout } from './components/Layout';
 import MovieDetail from './components/MovieDetail';
 import MovieGallery from './components/MovieGallery';
 import { SearchContainer } from './components/SearchContainer';
@@ -51,14 +52,17 @@ const App: React.FC = () => {
         <Route exact path="/">
           <MovieContext.Provider value={{ movieId, goToMovieDetailPage }}>
             <GlobalStyles />
-            <Wrapper>
-              <Header appName="Movie App" />
-              <SearchContainer value={searchValue} setSearchValue={setSearchValue} />
-              <MovieGallery movieList={movieList} />
-            </Wrapper>
+            <Layout>
+              <Wrapper>
+                <SearchContainer value={searchValue} setSearchValue={setSearchValue} />
+                <MovieGallery movieList={movieList} />
+              </Wrapper>
+            </Layout>
           </MovieContext.Provider>
         </Route>
-        <Route path="/movie/:id" component={MovieDetail} />
+        <Layout>
+          <Route path="/movie/:id" component={MovieDetail} />
+        </Layout>
       </Switch>
     </Router>
   );
