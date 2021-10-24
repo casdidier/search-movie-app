@@ -45,14 +45,14 @@ const App: React.FC = () => {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Layout toggleTheme={toggleTheme} isDarkTheme={isDarkTheme}>
+            <Layout toggleTheme={toggleTheme}>
               <Wrapper>
                 <SearchContainer value={searchValue} setSearchValue={setSearchValue} />
                 <MovieGallery movieList={movieList} />
               </Wrapper>
             </Layout>
           </Route>
-          <Layout toggleTheme={toggleTheme} isDarkTheme={isDarkTheme}>
+          <Layout toggleTheme={toggleTheme}>
             <Route path="/movie/:id" component={MovieDetail} />
           </Layout>
         </Switch>
