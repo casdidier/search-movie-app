@@ -11,7 +11,6 @@ const Wrapper = styled.div`
 
 interface Props {
   children: JSX.Element;
-  //   toggleTheme: () => React.Dispatch<React.SetStateAction<string>>;
   toggleTheme: () => void;
 }
 
