@@ -4,7 +4,6 @@ import { useHistory } from 'react-router-dom';
 
 import { Movie } from '../api';
 import { IMAGE_URL } from '../config';
-import MovieContext from '../context/MovieContext';
 
 const Card = styled.div`
   &:hover {
@@ -31,11 +30,9 @@ const CardDescription = styled.div`
 
 interface Props {
   movie: Movie;
-  //   goToMovie: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 function MovieCard({ movie }: Props): ReactElement {
-  const { movieId, goToMovieDetailPage } = useContext(MovieContext);
   const history = useHistory();
 
   return (
@@ -44,7 +41,6 @@ function MovieCard({ movie }: Props): ReactElement {
         src={`${IMAGE_URL}w${200}/${movie.poster_path}`}
         alt={movie.original_title}
         onClick={() => {
-          goToMovieDetailPage(movie.id);
           history.push(`/movie/${movie.id}`);
         }}
       />
