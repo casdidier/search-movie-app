@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { GlobalStyles } from '../theme';
 import { Header } from './Header';
 
 const Wrapper = styled.div`
@@ -17,6 +18,7 @@ interface Props {
 
 export const Layout = ({ children, isDarkTheme, toggleTheme }: Props): JSX.Element => (
   <Wrapper>
+    <GlobalStyles />
     <Header appName="Movie App" isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
     {children}
   </Wrapper>

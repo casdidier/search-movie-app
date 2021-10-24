@@ -45,21 +45,15 @@ const App: React.FC = () => {
       <Router>
         <Switch>
           <Route exact path="/">
-            <>
-              <GlobalStyles />
-              <Layout toggleTheme={toggleTheme} isDarkTheme={isDarkTheme}>
-                <Wrapper>
-                  <SearchContainer value={searchValue} setSearchValue={setSearchValue} />
-                  <MovieGallery movieList={movieList} />
-                </Wrapper>
-              </Layout>
-            </>
+            <Layout toggleTheme={toggleTheme} isDarkTheme={isDarkTheme}>
+              <Wrapper>
+                <SearchContainer value={searchValue} setSearchValue={setSearchValue} />
+                <MovieGallery movieList={movieList} />
+              </Wrapper>
+            </Layout>
           </Route>
           <Layout toggleTheme={toggleTheme} isDarkTheme={isDarkTheme}>
-            <>
-              <GlobalStyles />
-              <Route path="/movie/:id" component={MovieDetail} />
-            </>
+            <Route path="/movie/:id" component={MovieDetail} />
           </Layout>
         </Switch>
       </Router>
