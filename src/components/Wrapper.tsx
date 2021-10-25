@@ -6,7 +6,7 @@ export default styled.div`
   flex-direction: column;
   margin-right: auto;
   margin-left: auto;
-  max-width: 960px;
+  max-width: 100vw;
   padding-right: 10px;
   padding-left: 10px;
 `;

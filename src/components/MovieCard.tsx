@@ -1,6 +1,7 @@
 import React, { ReactElement, useContext } from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
+import px2vw from '../utils/px2vw';
 
 import { Movie } from '../api';
 import { IMAGE_URL } from '../config';
@@ -8,10 +9,19 @@ import { IMAGE_URL } from '../config';
 const Card = styled.div`
   position: relative;
   cursor: pointer;
+  height: 100%;
 
   &:hover {
     opacity: 0.6;
     height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    width: ${px2vw(270)};
+  }
+
+  @media (max-width: 480px) {
+    width: ${px2vw(500)};
   }
 `;
 
@@ -19,6 +29,14 @@ const Image = styled.img`
   object-fit: cover;
   display: block;
   position: relative;
+
+  @media (max-width: 768px) {
+    width: ${px2vw(270)};
+  }
+
+  @media (max-width: 480px) {
+    width: ${px2vw(500)};
+  }
 `;
 
 const CardDescription = styled.div`
