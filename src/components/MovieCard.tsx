@@ -50,14 +50,12 @@ function MovieCard({ movie }: Props): ReactElement {
   const history = useHistory();
 
   return (
-    <Card>
-      <Image
-        src={`${IMAGE_URL}w${200}/${movie.poster_path}`}
-        alt={movie.original_title}
-        onClick={() => {
-          history.push(`/movie/${movie.id}`);
-        }}
-      />
+    <Card
+      onClick={() => {
+        history.push(`/movie/${movie.id}`);
+      }}
+    >
+      <Image src={`${IMAGE_URL}w${200}/${movie.poster_path}`} alt={movie.original_title} />
 
       <CardDescription>{movie.original_title}</CardDescription>
     </Card>
