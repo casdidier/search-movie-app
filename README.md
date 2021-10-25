@@ -9,7 +9,7 @@ vide ​ TMDB - Documentation - Get popular movies
 [X] Pouvoir naviguer vers la page d’un film en cliquant sur son affiche. Cette dernière
 contiendra des informations complémentaires ​ TMDB - Documentation - Get movie details
 [x] Pouvoir revenir sur la home via un bouton retour dans le header
-[] Au hover d’un film, afficher son titre
+[X] Au hover d’un film, afficher son titre
 [x] Mettre en place un toggle dans le header afin de permettre la bascule entre un
 thème light et un thème dark (bonus si sans rafraîchissement)
 
