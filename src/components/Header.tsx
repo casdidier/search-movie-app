@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Switch from '@mui/material/Switch';
 import NightsStayIcon from '@material-ui/icons/NightsStay';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowBackIosOutlinedIcon from '@mui/icons-material/ArrowBackIosOutlined';
 import { useHistory } from 'react-router-dom';
 
 const HeaderContainer = styled.div`
@@ -30,14 +30,20 @@ const Title = styled.div`
 
 const ToogleWrapper = styled.div`
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: center;
 `;
 
 const BackArrow = styled.div`
+  /* width:5rem; */
+  /* min-width: 25px; */
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
 `;
 
 interface Props {
@@ -50,7 +56,7 @@ export const Header = ({ appName, toggleTheme }: Props): JSX.Element => {
   return (
     <HeaderContainer>
       <BackArrow onClick={() => history.push('/')}>
-        <ArrowBackIcon fontSize="large" />
+        <ArrowBackIosOutlinedIcon fontSize="large" />
       </BackArrow>
       <Title>{appName}</Title>
       <ToogleWrapper>
