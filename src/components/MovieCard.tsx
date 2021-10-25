@@ -7,6 +7,7 @@ import { IMAGE_URL } from '../config';
 
 const Card = styled.div`
   position: relative;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.6;
@@ -56,7 +57,6 @@ function MovieCard({ movie }: Props): ReactElement {
       }}
     >
       <Image src={`${IMAGE_URL}w${200}/${movie.poster_path}`} alt={movie.original_title} />
-
       <CardDescription>{movie.original_title}</CardDescription>
     </Card>
   );
