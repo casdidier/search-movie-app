@@ -6,6 +6,8 @@ import { Movie } from '../api';
 import { IMAGE_URL } from '../config';
 
 const Card = styled.div`
+  position: relative;
+
   &:hover {
     opacity: 0.6;
     height: 100%;
@@ -13,8 +15,6 @@ const Card = styled.div`
 `;
 
 const Image = styled.img`
-  /* width: 100%;
-  height: 98%; */
   object-fit: cover;
   display: block;
   position: relative;
@@ -24,8 +24,22 @@ const CardDescription = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  padding: 1.2rem;
+  visibility: hidden;
+  opacity: 0;
+
+  ${Card}:hover & {
+    visibility: visible;
+    opacity: 1;
+  }
 `;
 
 interface Props {
@@ -44,7 +58,8 @@ function MovieCard({ movie }: Props): ReactElement {
           history.push(`/movie/${movie.id}`);
         }}
       />
-      {/* <CardDescription className="card">{movie.original_title}</CardDescription> */}
+
+      <CardDescription>{movie.original_title}</CardDescription>
     </Card>
   );
 }
