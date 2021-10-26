@@ -17,8 +17,9 @@ const HeaderContainer = styled('div')<{
   justify-content: space-between;
   font-weight: 500;
   font-size: 2rem;
-  background: ${props => (props.isDarkTheme ? headerDarkTheme.body : headerDarkTheme.body)};
-  color: ${props => (props.isDarkTheme ? headerDarkTheme.text : headerLightTheme.text)};
+  background-color: ${props =>
+    props.theme === 'dark' ? headerDarkTheme.body : headerDarkTheme.text};
+  color: ${props => (props.theme === 'dark' ? headerLightTheme.text : headerDarkTheme.body)};
   width: 100%;
   padding-right: 10px;
   padding-left: 10px;
@@ -54,11 +55,11 @@ const HOME_URL_PATH = 'http://localhost:3000/';
 
 interface Props {
   appName: string;
-  isDarkTheme: boolean;
+  theme: string;
   toggleTheme: () => void;
 }
 
-export const Header = ({ appName, toggleTheme, isDarkTheme }: Props): JSX.Element => {
+export const Header = ({ appName, toggleTheme, theme }: Props): JSX.Element => {
   const history = useHistory();
   const currentURL = window.location.href;
 
@@ -72,7 +73,7 @@ export const Header = ({ appName, toggleTheme, isDarkTheme }: Props): JSX.Elemen
   }
 
   return (
-    <HeaderContainer>
+    <HeaderContainer theme={theme}>
       {backArrow}
       <Title>{appName}</Title>
       <ToogleWrapper>

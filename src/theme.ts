@@ -48,10 +48,10 @@ export const darkTheme: ITheme = {
 };
 
 export const headerLightTheme: ITheme = {
-  body: '#60A5FA',
-  text: '#1F2937'
+  text: '#60A5FA',
+  body: '#1F2937'
 };
 export const headerDarkTheme: ITheme = {
-  body: '#60A5FA',
-  text: '#1F2937'
+  text: '#60A5FA',
+  body: '#1F2937'
 };

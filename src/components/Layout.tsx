@@ -11,14 +11,14 @@ const Wrapper = styled.div`
 
 interface Props {
   children: JSX.Element;
-  isDarkTheme: boolean;
+  theme: string;
   toggleTheme: () => void;
 }
 
-export const Layout = ({ children, toggleTheme, isDarkTheme }: Props): JSX.Element => (
+export const Layout = ({ children, toggleTheme, theme }: Props): JSX.Element => (
   <Wrapper>
     <GlobalStyles />
-    <Header appName="Movie App" toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+    <Header appName="Movie App" toggleTheme={toggleTheme} theme={theme} />
     {children}
   </Wrapper>
 );
