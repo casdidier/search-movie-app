@@ -1,5 +1,6 @@
 import React, { SetStateAction } from 'react';
 import styled from 'styled-components';
+import ClearIcon from '@mui/icons-material/Clear';
 
 const Input = styled.input`
   height: 30px;
@@ -58,7 +59,7 @@ export const SearchContainer = ({ value, setSearchValue }: Props): JSX.Element =
         placeholder="Type to search..."
       />
       <Button type="button" onClick={resetInputField}>
-        X
+        <ClearIcon />
       </Button>
     </StyledInput>
   );
