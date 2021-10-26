@@ -18,9 +18,8 @@
 
 - [x] Au hover d’un film, afficher son titre
 
-- [] Mettre en place un toggle dans le header afin de permettre la bascule entre un
-  thème light et un thème dark (bonus si sans rafraîchissement)
-  - [] BUG : le header ne change pas de couleur en meme temps que le reste de la UI.
+- [x] Mettre en place un toggle dans le header afin de permettre la bascule entre un
+      thème light et un thème dark (bonus si sans rafraîchissement)
 
 # constraints
 
