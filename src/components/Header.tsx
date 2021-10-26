@@ -7,7 +7,6 @@ import ArrowBackIosOutlinedIcon from '@mui/icons-material/ArrowBackIosOutlined';
 import { useHistory } from 'react-router-dom';
 import { headerLightTheme, headerDarkTheme } from '../theme';
 
-// FIXME: issue toogling colour with headercontainer
 const HeaderContainer = styled('div')<{
   isDarkTheme?: boolean;
   children: JSX.Element[];
