@@ -1,5 +1,9 @@
 # movie search app
 
+# how to get started
+
+`npm run start` be sure to run on port 3000 because there is some hardcoded constant based on it.
+
 # tasks
 
 - [x] Affichage des films les plus populaires par défaut quand le champ de recherche est vide
