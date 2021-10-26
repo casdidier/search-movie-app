@@ -2,20 +2,21 @@
 
 # tasks
 
-- [X] Affichage des films les plus populaires par défaut quand le champ de recherche est vide
+- [x] Affichage des films les plus populaires par défaut quand le champ de recherche est vide
 
-- [X] Pouvoir rechercher un film via la barre de recherche
+- [x] Pouvoir rechercher un film via la barre de recherche
 
-- [X] Pouvoir vider le champ de recherche à l’aide d’une croix dans l’input
+- [x] Pouvoir vider le champ de recherche à l’aide d’une croix dans l’input
 
-- [X] Pouvoir naviguer vers la page d’un film en cliquant sur son affiche
+- [x] Pouvoir naviguer vers la page d’un film en cliquant sur son affiche
 
 - [x] Pouvoir revenir sur la home via un bouton retour dans le header
 
-- [X] Au hover d’un film, afficher son titre
+- [x] Au hover d’un film, afficher son titre
 
-- [x] Mettre en place un toggle dans le header afin de permettre la bascule entre un
-thème light et un thème dark (bonus si sans rafraîchissement)
+- [] Mettre en place un toggle dans le header afin de permettre la bascule entre un
+  thème light et un thème dark (bonus si sans rafraîchissement)
+  - [] BUG : le header ne change pas de couleur en meme temps que le reste de la UI.
 
 # constraints
 
