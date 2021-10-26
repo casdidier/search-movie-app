@@ -36,7 +36,6 @@ const Button = styled.button`
   outline: none;
   border: none;
   background: none;
-  //FIXME: issue with hidden
   visibility: ${props => (props?.value !== '' ? 'visible' : 'hidden')};
 `;
 

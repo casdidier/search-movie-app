@@ -7,6 +7,10 @@ import { IMAGE_URL } from '../config';
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 const Details = styled.p`
@@ -20,6 +24,8 @@ const Description = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-top: 3rem;
+  margin-left: 3rem;
 `;
 
 const Overview = styled.div`
@@ -34,6 +40,17 @@ const Rating = styled.p``;
 const ImageDetail = styled.img`
   width: 25%;
   object-fit: cover;
+  margin-top: 3rem;
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    margin-left: 3rem;
+    width: 80%;
+  }
 `;
 
 interface ParamTypes {
@@ -48,10 +65,7 @@ export default function MovieDetail(): ReactElement {
   useEffect(() => {
     const fetchFromApi = async () => {
       console.log(id, parseInt(id, 2));
-      // setIsLoading(true);
       const result = await getMovieDetail(Number(id));
-      // setIsLoading(false);
-      console.log('movie details', result);
       setMovieDetail(result);
     };
     fetchFromApi();
