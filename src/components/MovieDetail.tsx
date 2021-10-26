@@ -64,7 +64,6 @@ export default function MovieDetail(): ReactElement {
 
   useEffect(() => {
     const fetchFromApi = async () => {
-      console.log(id, parseInt(id, 2));
       const result = await getMovieDetail(Number(id));
       setMovieDetail(result);
     };

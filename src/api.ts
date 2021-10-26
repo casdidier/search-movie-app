@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { API_URL, IMAGE_URL, API_KEY } from './config';
+import { API_URL, API_KEY } from './config';
 
 export interface Movie {
   id: number;
@@ -48,7 +48,6 @@ export const getMovieRequest = async (searchValue: string): Promise<MovieResults
 
 export const getMovieDetail = async (movieId: number): Promise<IMovieDetails> => {
   const result: Response = await fetch(`${API_URL}movie/${movieId}?api_key=${API_KEY}`);
-  console.log(`${API_URL}movie/${movieId}?api_key=${API_KEY}`);
 
   if (!result.ok) {
     throw new Error('Something went horrible wrong!');
