@@ -6,24 +6,37 @@
 
 # tasks
 
-- [x] Affichage des films les plus populaires par défaut quand le champ de recherche est vide
+- [x] Display of the most popular movies by default when the search field is empty
 
-- [x] Pouvoir rechercher un film via la barre de recherche
+- [x] To be able to search for a movie via the search bar
 
-- [x] Pouvoir vider le champ de recherche à l’aide d’une croix dans l’input
+- [x] Be able to empty the search field using a cross in the input
 
-- [x] Pouvoir naviguer vers la page d’un film en cliquant sur son affiche
+- [x] To be able to navigate to the page of a film by clicking on its poster
 
-- [x] Pouvoir revenir sur la home via un bouton retour dans le header
+- [x] To be able to return to the home via a return button in the header
 
-- [x] Au hover d’un film, afficher son titre
+- [x] When a movie is hovering, display its title
 
-- [x] Mettre en place un toggle dans le header afin de permettre la bascule entre un
-      thème light et un thème dark (bonus si sans rafraîchissement)
+- [x] Set up a toggle in the header to allow the switch between a
+      light theme and a dark theme (bonus if without refresh)
 
 # constraints
 
-- Faire une SPA à l’aide de React
-- Utilisation de Typescript
-- Utilisation de styled-components
-- L’application doit être responsive
+- Make a SPA using React
+- Using Typescript
+- Use of styled-components
+- The application must be responsive
+
+# Improvements and Ideas
+
+No separation of dependencies
+
+Router not outsourced
+Misuse of the theme styled component
+add tests
+use mobile first
+remove Eslint-disable
+add semantic structure
+add Links 
+
