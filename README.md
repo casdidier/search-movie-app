@@ -32,11 +32,11 @@
 
 No separation of dependencies
 
-Router not outsourced
-Misuse of the theme styled component
-add tests
-use mobile first
-remove Eslint-disable
-add semantic structure
-add Links 
+- Router not outsourced
+- Misuse of the theme styled component
+- add tests
+- use mobile first
+- remove Eslint-disable
+- add semantic structure
+- add Links 
 
