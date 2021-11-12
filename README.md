@@ -1,5 +1,9 @@
 # movie search app
 
+# Stack 
+
+React Typescript Hooks Styled Components
+
 # how to get started
 
 `npm run start` be sure to run on port 3000 because there is some hardcoded constant based on it.
